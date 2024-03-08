@@ -14,7 +14,7 @@ import java.util.List;
 
 
 //@Controller + @ResponseBody = @RestController
-@RestController
+@RestController //@Controller + @ResponseBody
 @RequestMapping("/")
 public class HomeController {
 
@@ -23,10 +23,7 @@ public class HomeController {
     public List<Product> getAllProducts(){
         System.out.println("Inside Home Controller");
         List<Product> productList = new ArrayList<>();
-                productList.add(new Product(101, "Fridge", "Electronics", 10000));
-        return productList;
+        productList.add(new Product(101, "Fridge", "Electronics", 10000));
+        return productList; //JSON Format (by default)
     }
-
-
-
 }
